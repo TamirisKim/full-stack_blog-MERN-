@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start:dev": "nodemon index.js" //установили библ nodemon которя авто обновляет сервер при ищменении  в коде теперь пишем npm run start:dev
+    "start:dev": "nodemon index.js" 
   },
   "author": "",
   "license": "ISC",
