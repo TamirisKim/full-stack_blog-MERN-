@@ -1,16 +1,22 @@
 import express from 'express'
+import jwt from 'jsonwebtoken'
+import mongoose from 'mongoose'
+
+import { registerValidation } from './validations/auth.js';
+
+mongoose
+    .connect('mongodb+srv://admin:RRRRRR@cluster0.6fxr3ja.mongodb.net/?retryWrites=true&w=majority')
+    .then(() => console.log('DB ok'))
+    .catch((err) => console.log('DB error', err));
 
 const app = express();
-app.use(express.json()) //теперь наше express приложение понимает json
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+app.use(express.json());
 
-app.post('/auth/login', (req, res) => {
-    res.json({
-        success: true,
-    })
+
+
+app.post('/auth/register', registerValidation, (req, res) => {
+ 
 })
 
 
