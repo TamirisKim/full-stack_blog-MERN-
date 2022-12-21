@@ -8,7 +8,7 @@ import { registerValidation } from './validations/auth.js';
 import UserModel from './models/User.js'
 
 mongoose
-    .connect('mongodb+srv://admin:RRRRRR@cluster0.6fxr3ja.mongodb.net/?retryWrites=true&w=majority')
+    .connect('mongodb+srv://admin:RRRRRR@cluster0.6fxr3ja.mongodb.net/blog?retryWrites=true&w=majority')
     .then(() => console.log('DB ok'))
     .catch((err) => console.log('DB error', err));
 
