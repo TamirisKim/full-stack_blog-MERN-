@@ -99,6 +99,9 @@ try{
 }
 })
 
+app.get('/auth/me', (req, res) => {
+    
+})
 
 app.listen(4444, (err) => {
     if (err) {
